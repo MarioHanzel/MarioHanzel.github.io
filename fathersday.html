@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Happy Father's Day</title>
+  </head>
+  <body>
+    <center>
+    <button class="button" onclick="typeWriter()">Click here for special effects</button>
+    <p id="demo"></p>
+    <image src="poster.png" style="width:700px;height:1000px;">
+    </center>
+  <style>
+
+    p{
+      color: red;
+      font-size: 50px;
+      font-family: sans-serif;
+    }
+    .button {
+      background-color: blue; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+}
+  </style>
+
+<script>
+var i = 0;
+var txt = "Dear daddy, thank you for all the things you have done for us! YOU are the best dad in the world and we are glad to have your genes. We wish you good health and happiness!";
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+  </body>
+</html>
